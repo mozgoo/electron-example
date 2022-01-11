@@ -1,0 +1,18 @@
+appId: com.mozgoo.example
+artifactName: '${name}_${version}_${platform}_${arch}.${ext}'
+productName: 'Example Electron App'
+win:
+  artifactName: '${name}_${version}_win32_${arch}.${ext}'
+  requestedExecutionLevel: asInvoker
+  target:
+    - nsis
+    - zip
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 'Example Electron App'
+  uninstallDisplayName: 'Example Electron App (${version})'
+
